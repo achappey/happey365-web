@@ -11,6 +11,13 @@ jobs:
         node-version: 10
     - run: npm install
     - run: npm run build
+      env:
+       REACT_APP_API_URL: "https://happey365.azurewebsites.net/api/"
+       REACT_APP_CLIENT_ID: ${{ secrets.CLIENT_ID }}     
+       REACT_APP_REDIRECT: "https://www.happey365.com/auth"
+       REACT_APP_AUDIENCE: ${{ secrets.AUDIENCE }}
+       REACT_APP_BRANDNAME: "happey365"  
+       REACT_APP_BRANDLOGO: "/happey365_logo.png"    
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '3.0.100'

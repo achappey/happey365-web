@@ -1,0 +1,58 @@
+{
+  "name": "happey365-web",
+  "version": "0.1.0",
+  "author": "achappey",
+  "dependencies": {
+    "@fluentui/react": "^7.140.0",
+    "@react-hook/media-query": "^1.1.1",
+    "happey365": "^0.1.4",
+    "localforage": "^1.7.4",
+    "i18next": "^19.5.1",
+    "msal": "^1.3.3",
+    "react": "16.8.5",
+    "react-dom": "16.8.5",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^11.7.3",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-guards": "^1.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
+    "build_test": "react-scripts build --env=test",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.62",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^6.0.0",
+    "@types/react-router": "^5.1.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@uifabric/fluent-theme": "^7.3.15",
+    "@uifabric/icons": "^7.5.7",
+    "react-scripts": "^3.4.3",
+    "typescript": "^3.9.5"
+  }
+}

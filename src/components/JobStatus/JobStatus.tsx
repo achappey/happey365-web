@@ -1,14 +1,11 @@
 import React from 'react';
-import { Stack, Link, MessageBar, MessageBarType, Icon, FontIcon } from '@fluentui/react';
-import { useTranslation } from 'react-i18next';
+import { FontIcon } from '@fluentui/react';
 
 export type Happey565JobStatusProps = {
     status: number;
 }
 
 export const Happey365JobStatus: React.FunctionComponent<Happey565JobStatusProps> = (props) => {
-    const { t } = useTranslation();
-
     let content = <></>;
 
     switch (props.status) {

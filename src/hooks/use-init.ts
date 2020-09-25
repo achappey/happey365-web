@@ -1,19 +1,19 @@
 import { ApiService } from '../services/apiService';
-import { useTranslation } from 'react-i18next';
+
 import useAuth from './use-auth';
 import { useEffect } from 'react';
 
 const serviceUrl = process.env.REACT_APP_API_URL;
 
 const useInit = () => {
-    const { i18n } = useTranslation();
-    const { signIn, signOut, getToken, currentUser, getTokenSilent } = useAuth();
+
+    const { signIn, signOut, currentUser, getTokenSilent } = useAuth();
 
     const service = new ApiService(serviceUrl!, getTokenSilent);
 
     useEffect(() => {
         const getUser = async () => {
-            const user = await service.login();
+            await service.login();
 
         }
 
@@ -21,7 +21,7 @@ const useInit = () => {
             getUser();
         }
 
-    }, [currentUser]);
+    }, [currentUser, service]);
 
     const routeGuard = (to: any, from: any, next: any) => {
         if (to.meta.auth) {

@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useCallback } from 'react';
 import { Label } from '@fluentui/react';
 
 import { useTranslation } from 'react-i18next';
@@ -16,15 +16,15 @@ export const Happey365ContactSync: React.FunctionComponent<Happey365ContactSyncP
 
     const service = useContext(ServiceContext);
 
-    const getItems = async () => {
+    const getItems = useCallback(async () => {
         const items = await service.getContactSyncJobs();
 
         setJobs(items);
-    }
+    }, [service]);
 
     useEffect(() => {
         getItems();
-    }, []);
+    }, [getItems, service]);
 
     const addJob = async () => {
         const newJob = await service.addContactSyncJob();

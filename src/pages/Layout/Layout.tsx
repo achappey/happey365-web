@@ -1,7 +1,7 @@
 import React from 'react';
 import { Stack } from '@fluentui/react';
 
-import { useTranslation } from 'react-i18next';
+
 import { GuardProvider, GuardedRoute } from 'react-router-guards';
 import { Switch } from 'react-router-dom';
 import { Happey365Header } from '../../components/Header/Header';
@@ -16,7 +16,7 @@ export type Happey365LayoutProps = {
 }
 
 export const Happey365Layout: React.FunctionComponent<Happey365LayoutProps> = (props) => {
-    const { t } = useTranslation();
+
 
     return <Stack style={{ height: "100%" }}>
         <Stack.Item>

@@ -9,7 +9,7 @@ export class ApiService {
 
     public login = async () => {
         const token = await this.getToken();
-        const user = await this.api.login(token);
+        await this.api.login(token);
     }
 
     public getVersionCleanJobs = async () => {

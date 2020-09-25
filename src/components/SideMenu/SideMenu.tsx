@@ -1,7 +1,7 @@
 import React from 'react';
 import { Stack, Nav, INavLinkGroup, Panel, PanelType } from '@fluentui/react';
 
-import { useTranslation } from 'react-i18next';
+
 import { useScreenSize } from '../../hooks/use-screen-size';
 import { withRouter } from 'react-router-dom';
 
@@ -12,7 +12,6 @@ export type happey365SideMenuProps = {
 }
 
 export const Happey365SideMenu = withRouter((props: any) => {
-    const { t } = useTranslation();
     const largeScreen = useScreenSize();
 
     const groups: INavLinkGroup[] = [{
